@@ -12,9 +12,9 @@ import CoreMotion
 class ViewController: UIViewController {
     var motionManager:CMMotionManager!
     var going=false
-    var score=0
+    var score:Double=0
     let mass=0.14
-    let DEADBAND=0.3
+    let DEADBAND=0.15
     let STEP=0.02
     @IBOutlet var scoreLabel: UILabel!
     override func viewDidLoad() {
@@ -40,14 +40,15 @@ class ViewController: UIViewController {
         motionManager.deviceMotionUpdateInterval=STEP
         motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()){
             [weak self](data:CMDeviceMotion?, error:NSError?) in
-            print("\((data?.userAcceleration)!)")
+            //print("\((data?.userAcceleration)!)")
             let totalAccel=sqrt(pow((data?.userAcceleration.x)!,2.0)+pow((data?.userAcceleration.y)!,2.0)+pow((data?.userAcceleration.z)!,2.0))
+            print(totalAccel)
             if(abs(totalAccel-1))<self!.DEADBAND{ //check if acceleration is within deadband of 1
                 self!.score += 1
             } else {
                 self!.motionManager.stopDeviceMotionUpdates()
             }
-            self!.scoreLabel.text="\(self!.score)"
+            self!.scoreLabel.text="\(self!.score*self!.STEP)"
         }
     }
 }

@@ -489,6 +489,7 @@
 				226B0C0D1DBA3B2F00E84577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		226B0C0E1DBA3B2F00E84577 /* Build configuration list for PBXNativeTarget "Up Goer 5Tests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +498,7 @@
 				226B0C101DBA3B2F00E84577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		226B0C111DBA3B2F00E84577 /* Build configuration list for PBXNativeTarget "Up Goer 5UITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +507,7 @@
 				226B0C131DBA3B2F00E84577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
