@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     var going=false
     var score:Double=0
     let mass=0.14
-    let DEADBAND=0.15
-    let STEP=0.02
+    let DEADBAND=0.7
+    let STEP=0.01
     @IBOutlet var scoreLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
